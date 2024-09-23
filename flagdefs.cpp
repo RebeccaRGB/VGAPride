@@ -7,6 +7,8 @@
 #include "brazil.h"
 // The autistic pride flag works the same as crabs, so it's in here. I'm sorry. 
 #include "crabs.h"
+// More flags in here also for Reasons
+#include "flagdefx.h"
 
 
 
@@ -70,6 +72,29 @@ static Flag original_rainbow_flag = Flag(
 	"Designed by Gilbert Baker in 1978",
 	"original-gay",
 	original_rainbow_flag_commands
+);
+
+static GraphicsCommand nine_stripe_rainbow_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_9_0),Right(h_9_1),RGB(255,105,180)),
+	GraphicsCommand(Rectangle,Left(h_9_1),Right(h_9_2),RGB(255,  0,  0)),
+	GraphicsCommand(Rectangle,Left(h_9_2),Right(h_9_3),RGB(255,142,  0)),
+	GraphicsCommand(Rectangle,Left(h_9_3),Right(h_9_4),RGB(255,255,  0)),
+	GraphicsCommand(Rectangle,Left(h_9_4),Right(h_9_5),RGB(255,255,255)),
+	GraphicsCommand(Rectangle,Left(h_9_5),Right(h_9_6),RGB(  0,142,  0)),
+	GraphicsCommand(Rectangle,Left(h_9_6),Right(h_9_7),RGB(  0,192,192)),
+	GraphicsCommand(Rectangle,Left(h_9_7),Right(h_9_8),RGB( 64,  0,152)),
+	GraphicsCommand(Rectangle,Left(h_9_8),Right(h_9_9),RGB(142,  0,142)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag nine_stripe_rainbow_flag = Flag(
+	"nine-stripe-rainbow",
+	"The Rainbow Pride flag (9-stripe version)",
+	"Designed by Estevao Romane in 2018",
+	"gay9|rainbow9",
+	nine_stripe_rainbow_flag_commands,
+	RGB(255,255,255),
+	3
 );
 
 static GraphicsCommand trans_pride_flag_commands[]={
@@ -312,6 +337,25 @@ static Flag bigender_flag = Flag(
 );
 
 
+static GraphicsCommand leonis_ignis_gay_men_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_7_0),Right(h_7_1),RGB( 95, 51, 22)),
+	GraphicsCommand(Rectangle,Left(h_7_1),Right(h_7_2),RGB(221, 89,  0)),
+	GraphicsCommand(Rectangle,Left(h_7_2),Right(h_7_3),RGB(240,185,  0)),
+	GraphicsCommand(Rectangle,Left(h_7_3),Right(h_7_4),RGB(255,255,255)),
+	GraphicsCommand(Rectangle,Left(h_7_4),Right(h_7_5),RGB(129,199,230)),
+	GraphicsCommand(Rectangle,Left(h_7_5),Right(h_7_6),RGB(  0,130,202)),
+	GraphicsCommand(Rectangle,Left(h_7_6),Right(h_7_7),RGB(  0, 35,149)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag leonis_ignis_gay_men_flag = Flag(
+	"leonis-ignis-gay-men",
+	"A pride flag for Gay men",
+	"Created by Leonis Ignis at an unknown date",
+	"leonis-ignis",
+	leonis_ignis_gay_men_flag_commands
+);
+
 static GraphicsCommand gay_men_flag_commands[]={
 	GraphicsCommand(Rectangle,Left(h_7_0),Right(h_7_1),RGB(  7,141,112)),
 	GraphicsCommand(Rectangle,Left(h_7_1),Right(h_7_2),RGB( 38,206,170)),
@@ -329,6 +373,25 @@ static Flag gay_men_flag = Flag(
 	"Created by Triton (@gayflagblog on tumblr) in 2019, based on a design by Hermy", //according to https://prideflags.info/flag/mlm
 	"toothpaste",
 	gay_men_flag_commands
+);
+
+static GraphicsCommand five_stripe_gay_men_alt_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_5_0),Right(h_5_1),RGB(  7,141,112)),
+	GraphicsCommand(Rectangle,Left(h_5_1),Right(h_5_2),RGB(153,232,194)),
+	GraphicsCommand(Rectangle,Left(h_5_2),Right(h_5_3),RGB(255,255,255)),
+	GraphicsCommand(Rectangle,Left(h_5_3),Right(h_5_4),RGB(123,173,227)),
+	GraphicsCommand(Rectangle,Left(h_5_4),Right(h_5_5),RGB( 62, 26,120)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag five_stripe_gay_men_alt_flag = Flag(
+	"five-stripe-gay-men-alt",
+	"A 5-stripe unmodified version of the gayflagblog flag",
+	NULL,
+	"toothpaste5a",
+	five_stripe_gay_men_alt_flag_commands,
+	RGB(255,255,255),
+	2
 );
 
 static GraphicsCommand five_stripe_gay_men_flag_commands[]={
@@ -869,6 +932,109 @@ static Flag demiboy_flag = Flag(
 	"Designed by the tumblr user Transrants at an unknown date",
 	"demiman|demiguy",
 	demiboy_flag_commands
+);
+
+static GraphicsCommand demigender_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_7_0),Right(h_7_1),RGB(127,127,127)),
+	GraphicsCommand(Rectangle,Left(h_7_1),Right(h_7_2),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_2),Right(h_7_3),RGB(251,255,116)),
+	GraphicsCommand(Rectangle,Left(h_7_3),Right(h_7_4),RGB(255,255,255)),
+	GraphicsCommand(Rectangle,Left(h_7_4),Right(h_7_5),RGB(251,255,116)),
+	GraphicsCommand(Rectangle,Left(h_7_5),Right(h_7_6),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_6),Right(h_7_7),RGB(127,127,127)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag demigender_flag = Flag(
+	"demigender",
+	"The Demigender Pride flag",
+	NULL,
+	NULL,
+	demigender_flag_commands
+);
+
+static GraphicsCommand demiandrogyne_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_7_0),Right(h_7_1),RGB(127,127,127)),
+	GraphicsCommand(Rectangle,Left(h_7_1),Right(h_7_2),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_2),Right(h_7_3),RGB(184,244,131)),
+	GraphicsCommand(Rectangle,Left(h_7_3),Right(h_7_4),RGB(255,255,255)),
+	GraphicsCommand(Rectangle,Left(h_7_4),Right(h_7_5),RGB(184,244,131)),
+	GraphicsCommand(Rectangle,Left(h_7_5),Right(h_7_6),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_6),Right(h_7_7),RGB(127,127,127)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag demiandrogyne_flag = Flag(
+	"demiandrogyne",
+	"The Demiandrogyne Pride flag",
+	NULL,
+	NULL,
+	demiandrogyne_flag_commands
+);
+
+static GraphicsCommand demiandrogyne_enbygsrd_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_7_0),Right(h_7_1),RGB(127,127,127)),
+	GraphicsCommand(Rectangle,Left(h_7_1),Right(h_7_2),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_2),Right(h_7_3),RGB(254,  0,127)),
+	GraphicsCommand(Rectangle,Left(h_7_3),Right(h_7_4),RGB(152, 50,255)),
+	GraphicsCommand(Rectangle,Left(h_7_4),Right(h_7_5),RGB(  0,184,231)),
+	GraphicsCommand(Rectangle,Left(h_7_5),Right(h_7_6),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_6),Right(h_7_7),RGB(127,127,127)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag demiandrogyne_enbygsrd_flag = Flag(
+	"demiandrogyne-enbygsrd",
+	"A proposed Demiandrogyne Pride flag",
+	"Created by deviantArt user enbygsrd in 2016",
+	"enbygsrd-demiandrogyne",
+	demiandrogyne_enbygsrd_flag_commands
+);
+
+static GraphicsCommand demiflux_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_7_0),Right(h_7_1),RGB(127,127,127)),
+	GraphicsCommand(Rectangle,Left(h_7_1),Right(h_7_2),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_2),Right(h_7_3),RGB(255,181,183)),
+	GraphicsCommand(Rectangle,Left(h_7_3),Right(h_7_4),RGB(243,246,145)),
+	GraphicsCommand(Rectangle,Left(h_7_4),Right(h_7_5),RGB(153,217,234)),
+	GraphicsCommand(Rectangle,Left(h_7_5),Right(h_7_6),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Left(h_7_6),Right(h_7_7),RGB(127,127,127)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag demiflux_flag = Flag(
+	"demiflux",
+	"The Demiflux Pride flag",
+	NULL,
+	NULL,
+	demiflux_flag_commands
+);
+
+static GraphicsCommand demifluid_flag_commands[]={
+	GraphicsCommand(Rectangle,Left(h_7_0),Right(h_7_7),RGB(127,127,127)),
+	GraphicsCommand(Rectangle,Left(h_7_1),Right(h_7_6),RGB(196,196,196)),
+	GraphicsCommand(Rectangle,Point(0  ,h_7_2),Point(53 ,h_7_5),RGB(255,178,201)),
+	GraphicsCommand(Rectangle,Point(53 ,h_7_2),Point(107,h_7_5),RGB(255,193,193)),
+	GraphicsCommand(Rectangle,Point(107,h_7_2),Point(160,h_7_5),RGB(255,207,184)),
+	GraphicsCommand(Rectangle,Point(160,h_7_2),Point(213,h_7_5),RGB(255,222,176)),
+	GraphicsCommand(Rectangle,Point(213,h_7_2),Point(267,h_7_5),RGB(255,236,168)),
+	GraphicsCommand(Rectangle,Point(267,h_7_2),Point(320,h_7_5),RGB(246,238,173)),
+	GraphicsCommand(Rectangle,Point(320,h_7_2),Point(373,h_7_5),RGB(234,235,184)),
+	GraphicsCommand(Rectangle,Point(373,h_7_2),Point(427,h_7_5),RGB(222,232,195)),
+	GraphicsCommand(Rectangle,Point(427,h_7_2),Point(480,h_7_5),RGB(210,229,206)),
+	GraphicsCommand(Rectangle,Point(480,h_7_2),Point(533,h_7_5),RGB(198,226,218)),
+	GraphicsCommand(Rectangle,Point(533,h_7_2),Point(587,h_7_5),RGB(186,222,229)),
+	GraphicsCommand(Rectangle,Point(587,h_7_2),Point(640,h_7_5),RGB(174,219,240)),
+	GraphicsCommand(Rectangle,Left(h_7_3),Right(h_7_4),RGB(255,255,255)),
+	GraphicsCommand(EndCommandList)
+};
+
+static Flag demifluid_flag = Flag(
+	"demifluid",
+	"The Demifluid Pride flag",
+	NULL,
+	NULL,
+	demifluid_flag_commands
 );
 
 static GraphicsCommand omnisexual_flag_commands[]={

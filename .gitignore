@@ -29,6 +29,8 @@
 
 # Executables
 *.exe
+# yes it is case sensitive
+*.EXE 
 *.out
 *.app
 
